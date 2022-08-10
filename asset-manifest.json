@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "//anatoliy-shi.github.io/result-school/static/css/main.035e101c.css",
+    "main.js": "//anatoliy-shi.github.io/result-school/static/js/main.fc802e9a.js",
+    "static/media/image161.png": "//anatoliy-shi.github.io/result-school/static/media/image161.6b35fde4f6fcc26fbb4a.png",
+    "static/media/Golos-Text_Regular.ttf": "//anatoliy-shi.github.io/result-school/static/media/Golos-Text_Regular.5d7bc563bd99aa608d23.ttf",
+    "index.html": "//anatoliy-shi.github.io/result-school/index.html",
+    "main.035e101c.css.map": "//anatoliy-shi.github.io/result-school/static/css/main.035e101c.css.map",
+    "main.fc802e9a.js.map": "//anatoliy-shi.github.io/result-school/static/js/main.fc802e9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.035e101c.css",
+    "static/js/main.fc802e9a.js"
+  ]
+}
