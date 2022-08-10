@@ -9,38 +9,38 @@ import {ScrollChange} from "./component/scrollChange/ScrollChange";
 
 function App() {
     const colorWhite = "bg-[#E9E6F0]"
-    const whitePosition = "absolute top-[-87px] left-[114px] z-[-3]"
+    const whitePosition = "absolute top-[-87px] left-[114px] xl:left-[-46px] mxl:left-[-46px] lg:left-[-46px] md:hidden sm:hidden z-[-3]"
 
     const colorPurple = "bg-[#9088FF]"
-    const purplePosition = "absolute top-[48px] left-[962px] z-[1]"
+    const purplePosition = "absolute top-[48px] left-[962px] z-[1] lg:left-[775px] lg:top-[23px] md:top-[23px] md:left-[310px] sm:left-[251px] sm:top-[-86px]"
 
 
     return (
         <>
-            <div className="w-[1920px] h-[3200px] m-0 m-auto">
-                <section className="one mt-[99px] ml-[160px]">
+            <div className="max-w-[1920px] h-[4000px] m-0 m-auto lg:overflow-hidden md:overflow-hidden sm:overflow-hidden" >
+                <section className="mt-[99px] lg:mt-[20px] md:mt-[20px] sm:mt-[20px] ml-[160px] lg:ml-0 mxl:ml-0 md:ml-0 sm:ml-0">
                     <div
-                        className="bg-[#7B72FE] w-[1760px] h-[680px] z[-1] rounded-l-[40px] overflow-hidden">
-                        <div className="flex relative">
+                        className="bg-[#7B72FE] max-w-[1760px] h-[680px] mxl:h-[1160px] lg:h-[970px] lg:h-[1050px] md:h-[1120px] sm:h-[600px] z[-1] rounded-l-[40px] overflow-hidden">
+                        <div className="flex relative justify-items-center">
                             <Dots color={colorPurple} position={purplePosition}/>
                             <div
-                                className="w-[340px] h-[340px] rounded-[50%] bg-[#746BF4] z-[1] absolute bottom-[-31px] left-[146px]"></div>
+                                className="w-[340px] h-[340px] rounded-[50%] bg-[#746BF4] z-[1] absolute mxl:top-[423px] bottom-[-31px] left-[146px]"></div>
                             <div
-                                className="w-[340px] h-[340px] rounded-[50%] bg-[#746BF4] z-[1] absolute bottom-[-31px] left-[496px]"></div>
+                                className="w-[340px] h-[340px] rounded-[50%] bg-[#746BF4] z-[1] absolute mxl:top-[423px] bottom-[-31px] left-[496px]"></div>
                             <div
-                                className="w-[340px] h-[340px] rounded-[50%] bg-[#746BF4] z-[1] absolute bottom-[-31px] left-[846px]"></div>
-                            <div className="flex">
-                                <div className="text pt-[67px] pl-[95px] z-[2]">
-                                    <h3 className="w-[763px] leading-[130%] font-semibold text-[#fff] text-[54px] tracking-widest">
+                                className="w-[340px] h-[340px] rounded-[50%] bg-[#746BF4] z-[1] absolute mxl:top-[423px] bottom-[-31px] left-[846px]"></div>
+                            <div className="flex mxl:flex-wrap lg:flex-wrap md:flex-wrap sm:flex-wrap mxl:justify-center m-0 m-auto">
+                                <div className="text pt-[67px] sm:ml-[1px] sm:pl-[5px] sm:pr-[5px] sm:pt-[20px] mxl:pl-0 mxl:m-0 mxl:m-auto sm:m-[5px] lg:m-0 lg:m-auto lg:pt-[23px] pl-[95px] lg:pl-[40px] md:m-auto z-[2] md:pl-0">
+                                    <h3 className="w-[763px] leading-[130%] font-semibold text-[#fff] text-[54px] lg:text-[38px] md:text-[26px] sm:text-[18px] sm:w-[290px] tracking-widest">
                                         Профессия <br/> Frontend — разработчик
                                     </h3>
-                                    <p className="w-[740px] pt-[40px] leading-[140%] text-[30px] font-semibold text-[#fff] tracking-[0.005em]">
+                                    <p className="w-[740px] md:w-[340px] sm:w-[290px] pt-[40px] md:pt-[30px] lg:pt-[20px] leading-[140%] text-[30px] lg:text-[24px] md:text-[19px] sm:text-[14px] font-semibold text-[#fff] tracking-[0.005em]">
                                         Стань с нуля продвинутым Junior разработчиком за 7 месяцев с знанием технологий
                                         больше,
                                         чем
                                         у других кандидатов
                                     </p>
-                                    <p className="w-[699px] pt-[26px] font-normal tracking-[0.005em] leading-[150%] text-[18px] text-[#fff]">
+                                    <p className="w-[699px] md:w-[340px] sm:w-[290px] pt-[26px] lg:pt-[20px] font-normal tracking-[0.005em] leading-[150%] text-[18px] sm:text-[12px] lg:text-[14px] text-[#fff]">
                                         Начиная с основ изучишь JavaScript, разберешься с самыми популярными
                                         технологиями,
                                         научишься
@@ -50,12 +50,12 @@ function App() {
                                         100 т.р.
                                     </p>
                                     <button type="button"
-                                            className="cursor-pointer w-[325px] h-[74px] mt-[60px] bg-[#ED7138] rounded-[51px] text-[#fff] leading-[100%] font-normal text-[18px] ">Задать
+                                            className="cursor-pointer w-[325px] sm:w-[290px] h-[74px] mt-[60px] mxl:mt-[25px] sm:mt-[25px] sm:ml-[-8px] lg:mt-[25px] bg-[#ED7138] rounded-[51px] text-[#fff] leading-[100%] font-normal text-[18px] ">Задать
                                         вопрос об обучении
                                     </button>
                                 </div>
                                 <div
-                                    className="mt-[95px] ml-[150px] w-[831px] h-[601px] bg-[#FFF] z-10 rounded-tl-[15px] font-[600]">
+                                    className="sm:hidden mt-[95px] mxl:mt-[50px] lg:mt-[50px] lg:m-0 lg:m-auto  mxl:m-0 mxl:m-auto ml-[150px] w-[831px] h-[601px] bg-[#FFF] z-10 rounded-tl-[15px] font-[600] md:ml-0 sm:m-0 sm:m-auto sm:mt-[15px]">
                                     <div className="mt-[12px] mb-[30px] flex items-center justify-between">
                                         <div className="flex">
                                             <div
@@ -248,63 +248,58 @@ function App() {
                         </div>
                     </div>
                 </section>
-                <section className="two relative">
+                <section className="relative">
                     <Dots color={colorWhite} position={whitePosition}/>
                     <div
-                        className="w-[396px] h-[166px] absolute top-[-90px] left-[1061px] bg-[#FFF] rounded-[24px] z-20 flex items-center justify-center shadow-md">
-                        <img className="absolute bottom-[139px] left-[62px] z-30 bg-[#7F76FF] p-[18px] rounded-[24px]"
+                        className="w-[396px] sm:w-[290px] h-[166px] sm:h-[180px] absolute top-[-90px] left-[1061px] xl:left-[901px] mxl:left-[621px] mxl:top-[-567px] lg:left-[325px] lg:top-[-505px] md:left-[50px] md:top-[-469px] sm:top-[-136px] sm:left-[4px] bg-[#FFF] rounded-[24px] z-20 flex items-center justify-center shadow-md">
+                        <img className="absolute bottom-[139px] sm:bottom-[163px] left-[62px] z-30 bg-[#7F76FF] p-[18px] rounded-[24px]"
                              src={vect} alt="vect"/>
-                        <p className="font-normal tracking-[0.005em] text-[16px] leading-[150%] w-[348px] h-[96px]">
+                        <p className="font-normal tracking-[0.005em] text-[16px] leading-[150%] w-[348px] h-[96px] sm:h-[150px]">
                             <span className="text-[#ED7138]">Обучение</span> для тех, <span className="text-[#9e9e9e]">кто готов учиться 10 часов в неделю</span>, <span
                             className="text-[#ED7138]">чтобы получить результат</span>. Мы даем <span
                             className="text-[#9e9e9e]">необходимые навыки</span> на продвинутом уровне, <span
                             className="text-[#9e9e9e]">убирая все лишнее</span>
                         </p>
                     </div>
-                    <div className="pt-[95px] flex justify-center flex-wrap ">
-
-                        <div className="flex items-center">
-                            <div className="mr-[20px] bg-[#E0E6E9] text-[34px] w-[9px] h-[9px] rounded-[50%]"></div>
-                            <div
-                                className="mr-[16px] number text-[#ED7138] tracking-[0.01em] text-[72px] leading-[78px] font-[600]">293
+                    <div className="pt-[95px] lg:pt-[30px] md:pt-[30px] sm:pt-[65px] flex justify-evenly flex-wrap lg:flex-col md:flex-col lg:m-0 lg:m-auto lg:items-center md:m-auto md:items-center">
+                        <div className="flex items-center lg:w-[400px] md:w-[320px] sm:w-[290px] md:mb-[10px] lg:mb-[15px] sm:mb-[5px]">
+                            <div className="mr-[20px]  bg-[#E0E6E9] text-[34px] w-[9px] h-[9px] rounded-[50%] mxl:hidden"></div>
+                            <div className="mr-[16px]  number text-[#ED7138] tracking-[0.01em] text-[72px] sm:text-[54px] mxl:text-[56px] leading-[78px] font-[600]">293
                             </div>
-                            <div
-                                className="w-[225px] text mr-[94px] tracking-[0.005em] text-[16px] leading-[150%] font-[400]">HD
+                            <div className="w-[225px] tracking-[0.005em] text-[16px] leading-[150%] font-[400]">HD
                                 видеоурока длительностью 3 - 15 минут
                             </div>
                         </div>
-                        <div className="flex items-center">
-                            <div className="mr-[20px] bg-[#E0E6E9] text-[34px] w-[9px] h-[9px] rounded-[50%]"></div>
+                        <div className="flex items-center lg:w-[400px] md:w-[320px] sm:w-[290px] md:mb-[10px] lg:mb-[15px] sm:mb-[5px]">
+                            <div className="mr-[20px] bg-[#E0E6E9] text-[34px] w-[9px] h-[9px] rounded-[50%] mxl:hidden "></div>
                             <div
-                                className="mr-[16px] number text-[#ED7138] tracking-[0.01em] text-[72px] leading-[78px] font-[600]">6
+                                className="mr-[16px] number text-[#ED7138] tracking-[0.01em] text-[72px] sm:text-[54px] mxl:text-[56px] leading-[78px] font-[600]">6
                             </div>
-                            <div className="w-[279px] text mr-[94px] ">Мероприятий на курсе (Хакатоны, мастер классы,
+                            <div className="w-[279px] tracking-[0.005em] text-[16px] leading-[150%] font-[400]">Мероприятий на курсе (Хакатоны, мастер классы,
                                 разборы и т.д.)
                             </div>
                         </div>
-                        <div className="flex items-center">
-                            <div className="mr-[20px] bg-[#E0E6E9] text-[34px] w-[9px] h-[9px] rounded-[50%]"></div>
+                        <div className="flex items-center lg:w-[400px] md:w-[320px] sm:w-[290px]">
+                            <div className="mr-[20px] bg-[#E0E6E9] text-[34px] w-[9px] h-[9px] rounded-[50%] mxl:hidden"></div>
                             <div
-                                className="mr-[16px] number text-[#ED7138] tracking-[0.01em] text-[72px] leading-[78px] font-[600]">193
+                                className="mr-[16px]  number text-[#ED7138] tracking-[0.01em] text-[72px] sm:text-[54px] mxl:text-[56px] leading-[78px] font-[600]">193
                             </div>
-                            <div className="w-[149px] text mr-[94px] ">заданий и тестов для закрепления</div>
+                            <div className="w-[149px] tracking-[0.005em] text-[16px] leading-[150%] font-[400]">заданий и тестов для закрепления</div>
                         </div>
                     </div>
                 </section>
-                <section className="three mb-[60px]">
-                    <div className="flex justify-center mt-[155px] items-center mb-[40px]">
-                        <div
-                            className="mr-[31px] rounded-[50%] bg-[#7B72FE] text-white w-[26px] h-[26px] text-[18px] text-center">?
-                        </div>
-                        <h3 className="text-[#0F1214] font-[700] text-[54px] leading-[130%]">Как именно ты станешь
+                <section className="mb-[60px]">
+                    <div className="flex justify-center mt-[155px] lg:mt-[50px] md:mt-[50px] sm:mt-[50px] items-center mb-[40px]">
+                        <p className="mr-[31px] mxl:mr-[18px] sm:mr-[12px] sm:ml-[15px] lg:mr-[14px] rounded-[50%] bg-[#7B72FE] text-white w-[26px] h-[26px] text-[18px] text-center">?
+                        </p>
+                        <h3 className="text-[#0F1214] font-[700] text-[54px] mxl:text-[48px] lg:text-[35px] md:text-[20px] sm:text-[20px] leading-[130%]">Как именно ты станешь
                             разработчиком</h3>
                     </div>
-                    <p className="m-0 m-auto w-[970px] text-center text-[24px] font-[400] leading-[33.6px]">На курсе ты
+                    <p className="m-0 m-auto w-[970px] lg:w-[767px] md:w-[460px] sm:w-[290px] text-center text-[24px] lg:text-[20px] md:text-[18px] sm:text-[18px] font-[400] leading-[33.6px]">На курсе ты
                         не просто изучаешь теоретический материал. в процессе изучения ты повторяете за действующим
-                        разработчиком, после чего <span
-                            className=""><b>закрепляешь знания на заданиях и проектах.</b></span></p>
+                        разработчиком, после чего <span><b>закрепляешь знания на заданиях и проектах.</b></span></p>
                 </section>
-                <section className="four flex justify-center flex-wrap w-[1410px] m-0 m-auto">
+                <section className="flex justify-center flex-wrap w-[1410px] mxl:w-auto m-0 m-auto lg:w-auto md:w-auto sm:w-auto">
                     <div className="w-[806px] h-[37px] bg-[#F2F2F1] flex items-center relative rounded-t-[20px]">
                         <div className="flex align-middle mt-[3px]">
                             <div className="w-[12px] h-[12px] mr-[4px] bg-[#D3D3CB] rounded-[50%] ml-[18px] "></div>
@@ -312,7 +307,7 @@ function App() {
                             <div className="w-[12px] h-[12px] mr-[4px] bg-[#D3D3CB] rounded-[50%] "></div>
                         </div>
                         <div
-                            className="left w-[342px] h-[288px] bg-[#fff] rounded-[20px] shadow-md border-[1px] border-[#947EFF] pt-[20px] pl-[24px] absolute top-[112px] left-[-315px]">
+                            className="w-[342px] h-[288px] bg-[#fff] rounded-[20px] shadow-md border-[1px] border-[#947EFF] pt-[20px] pl-[24px] absolute top-[112px] left-[-315px] mxl:left-[-100px] lg:left-[5px] md:top-[-35px] md:left-[52px] sm:w-[293px] sm:h-[322px] sm:left-[4px] sm:top-[-43px]">
                             <h4 className="text-[#9088FF] text-[14px] leading-[18.2px] font-[600] uppercase mb-[14px]">
                                 2 Командных проекта
                             </h4>
@@ -324,7 +319,7 @@ function App() {
                             </p>
                         </div>
                         <div
-                            className="left w-[390px] h-[416px] bg-[#fff] rounded-[20px] shadow-md border-[1px] border-[#947EFF] pt-[20px] pl-[24px] absolute top-[215px] left-[706px]">
+                            className="left w-[390px] h-[416px] bg-[#fff] rounded-[20px] shadow-md border-[1px] border-[#947EFF] pt-[20px] pl-[24px] absolute top-[215px] left-[706px] mxl:left-[510px] lg:top-[165px] lg:left-[350px] md:top-[274px] md:left-[29px] sm:w-[293px] sm:h-[322px] sm:left-[4px] sm:top-[252px] sm:h-[480px]">
                             <h4 className="text-[#9088FF] text-[14px] leading-[18.2px] font-[600] uppercase mb-[14px]">
                                 Индивидуальные проекты
                             </h4>
@@ -341,8 +336,8 @@ function App() {
                     </div>
                     <img className="z-[-1]" src={img161} alt="img161"/>
                 </section>
-                <section className="five">
-                <h5 className="text-[13px] font-[400] leading-[19.5px] text-center mt-[40px]">Проекты учеников</h5>
+                <section>
+                <h5 className="text-[13px] font-[400] leading-[19.5px] text-center mt-[40px] md:mt-[345px] sm:mt-[500px]">Проекты учеников</h5>
                 </section>
                 <ScrollChange/>
             </div>

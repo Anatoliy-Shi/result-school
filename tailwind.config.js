@@ -4,36 +4,26 @@ module.exports = {
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
+        screens: {
+            'sm': {'min': '320px', 'max': '479px'},
+            'md': {'min': '480px', 'max': '767px'},
+            'lg': {'min': '768px', 'max': '1023px'},
+            'mxl': {'min': '1024px', 'max': '1437px'},
+            'xl': {'min': '1438px', 'max': '1535px'},
+            '2xl': {'min': '1536px'},
+        },
         extend: {
             animation: {
-                strongUp: 'strongUp 1.5s ease-in-out',
-                skillUp: 'skillUp 1.5s ease-in-out',
+                scrollMove: 'scrollMove 0.5s',
             },
             keyframes: {
-                skillUp: {
+                scrollMove: {
                     '0%': {
-                        transform: 'translateX(-50%)',
+                        transform: 'translateY(50%)',
                         opacity: 0
                     },
-                    '50%': {
-                        transform: 'translateX(0)',
-                        opacity: 0.5
-                    },
                     '75%': {
-                        opacity: 0.75
-                    },
-                    '100%': {opacity: 1},
-                },
-                strongUp: {
-                    '0%': {
-                        transform: 'translateX(50%)',
-                        opacity: 0
-                    },
-                    '50%': {
-                        transform: 'translateX(0%)',
-                        opacity: 0.5
-                    },
-                    '75%': {
+                        transform: 'translateY(25%)',
                         opacity: 0.75
                     },
                     '100%': {opacity: 1},

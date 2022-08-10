@@ -11,20 +11,18 @@ export const ScrollChange = () => {
     const [totalPadding, setTotalPadding] = useState(0)
 
     useEffect(() => {
-        const one = document.querySelector(".one").getBoundingClientRect().height
-        const two = document.querySelector(".two").getBoundingClientRect().height
-        const three = document.querySelector(".three").getBoundingClientRect().height
-        const four = document.querySelector(".four").getBoundingClientRect().height
-        const five = document.querySelector(".five").getBoundingClientRect().height
         const visibleWindow = window.innerHeight
-        const pageEnd = document.querySelector(".section").getBoundingClientRect().height
-        //сумма размеров секций
-        const sum = one + two + three + four + five + ((visibleWindow - pageEnd) /2) - 150
-        setTotalPadding(sum)
+        const blockHeight = document.querySelector(".section").getBoundingClientRect().height
+        const pageEndY = document.querySelector(".section").getBoundingClientRect().y
+        //какой отступ нужен сверху для анимации
+        const paddingToTop =  ((visibleWindow - blockHeight) /2)
+
         const handeScroll = () => {
-            if (window.scrollY >= totalPadding) {
+            if (paddingToTop >= pageEndY) {
+                setTotalPadding(pageEndY)
                 setCheck(true)
             } else {
+                setTotalPadding(pageEndY)
                 setCheck(false)
             }
         }
@@ -34,55 +32,55 @@ export const ScrollChange = () => {
         })
     }, [check, totalPadding])
 
+
+
     return (
         <section
-                 className="section mt-[89px] w-[1860px] h-[640px] bg-[#0F1214] rounded-[20px] m-0 m-auto text-[#FFF] text-center">
-            <h3 className="text-[54px] leading-[70.2px] font-[700] pt-[123px]">Что тебе даст прохождение
+                 className="section ml-[5px] mr-[7px] mt-[89px] lg:mt-[40px] max-w-[1860px] h-[640px] lg:h-[900px] md:h-[1050px] sm:h-[1050px] bg-[#0F1214] rounded-[20px] m-0 m-auto text-[#FFF] text-center">
+            <h3 className="text-[54px] sm:text-[36px] lg:text-[38px] leading-[70.2px] font-[700] pt-[123px] lg:pt-[50px] md:pt-[50px] sm:pt-[50px]">Что тебе даст прохождение
                 курса?</h3>
-            <div className="text-[24px] font-[600] leading-[130%] mt-[40px] flex justify-center">
+            <div className="text-[24px] sm:text-[18px] font-[600] leading-[130%] mt-[40px] flex justify-center">
                 <p className={check ? "mr-[40px] opacity-[50%]" : "mr-[40px]"}> SKILLS UPGRADE</p>
                 <p className={!check ? "opacity-[50%]" : null}>STRONG HARD SKILLS</p>
             </div>
-            <div className="flex flex-nowrap justify-center">
                 {check && <div
-                    className="flex pt-[108px] justify-evenly">
-                    <div className="flex items-center flex-col animate-strongUp">
+                    className="flex pt-[108px] sm:pt-[50px] lg:pt-[50px] md:pt-[50px] cm:pt-[50px] justify-evenly lg:flex-col md:flex-col sm:flex-col " >
+                    <div className="flex items-center flex-col animate-scrollMove lg:pb-[50px]  md:pb-[50px] sm:pb-[50px]">
                         <img src={code} alt="react"/>
-                        <p className="pt-[30px] w-[440px] text-[22px] font-[500] leading-[130%]">Научишься понимать
+                        <p className="pt-[30px] w-[440px] sm:w-[280px] mxl:w-[330px] text-[22px] mxl:text-[16px] sm:text-[14px] font-[500] leading-[130%]">Научишься понимать
                             терминологию, документацию и писать код на уровне востребованных разработчиков</p>
                     </div>
-                    <div className="flex items-center flex-col animate-strongUp">
+                    <div className="flex items-center flex-col animate-scrollMove lg:pb-[50px]  md:pb-[50px] sm:pb-[50px] ">
                         <img src={nano} alt="nodejs"/>
-                        <p className="pt-[30px] w-[440px] text-[22px] font-[500] leading-[130%]">твои знания превратятся
+                        <p className="pt-[30px] w-[440px] sm:w-[280px] mxl:w-[330px] text-[22px] mxl:text-[16px] sm:text-[14px] font-[500] leading-[130%]">твои знания превратятся
                             в
                             систему, ты не просто изучишь технологии, но и поймешь как развиваться дальше </p>
                     </div>
-                    <div className="flex items-center flex-col animate-strongUp">
+                    <div className="flex items-center flex-col animate-scrollMove ">
                         <img src={fullstack} alt="nano"/>
-                        <p className="pt-[30px]  w-[407px] text-[22px] font-[500] leading-[130%]">Создашь Fullstack
+                        <p className="pt-[30px]  w-[407px] sm:w-[280px] mxl:w-[330px] text-[22px] mxl:text-[16px] sm:text-[14px] font-[500] leading-[130%]">Создашь Fullstack
                             приложение, которое покажет что твои навыки выше чем у стандартного junior </p>
                     </div>
                 </div>}
                 {!check && <div
-                    className="flex pt-[108px] justify-evenly">
-                    <div className="flex items-center flex-col animate-skillUp">
+                    className="flex pt-[108px] lg:pt-[50px] md:pt-[50px] sm:pt-[50px] justify-evenly lg:flex-col md:flex-col sm:flex-col " >
+                    <div className="flex items-center flex-col animate-scrollMove lg:pb-[50px] md:pb-[50px] sm:pb-[50px]">
                         <img src={react} alt="react"/>
-                        <p className="pt-[30px] w-[440px] text-[22px] font-[500] leading-[130%]">Создаёте с помощью
+                        <p className="pt-[30px] w-[440px] sm:w-[280px] mxl:w-[330px] text-[22px] sm:text-[14px] mxl:text-[16px] font-[500] leading-[130%]">Создаёте с помощью
                             фреймворка React визуальную часть приложения:
                             элементы, анимация</p>
                     </div>
-                    <div className="flex items-center flex-col animate-skillUp">
+                    <div className="flex items-center flex-col animate-scrollMove lg:pb-[50px] md:pb-[50px] sm:pb-[50px]">
                         <img src={node} alt="nodejs"/>
-                        <p className="pt-[30px] w-[440px] text-[22px] font-[500] leading-[130%]">Изучишь NodeJS на
+                        <p className="pt-[30px] w-[440px] sm:w-[280px] mxl:w-[330px] text-[22px] sm:text-[14px] mxl:text-[16px] font-[500] leading-[130%]">Изучишь NodeJS на
                             достаточном уровне чтобы связывать frontend и backend</p>
                     </div>
-                    <div className="flex items-center flex-col animate-skillUp">
+                    <div className="flex items-center flex-col animate-scrollMove ">
                         <img src={nano} alt="nano"/>
-                        <p className="pt-[30px]  w-[407px] text-[22px] font-[500] leading-[130%]">Овладеешь базой, от
+                        <p className="pt-[30px]  w-[407px] sm:w-[280px] mxl:w-[330px] text-[22px] sm:text-[14px] mxl:text-[16px] font-[500] leading-[130%]">Овладеешь базой, от
                             которого можно отталкиваться и учить любую технологию на JavaScript</p>
                     </div>
                 </div>}
-            </div>
         </section>
     )
 }
