@@ -17,10 +17,10 @@ function App() {
 
     return (
         <>
-            <div className="max-w-[1920px] h-[4000px] m-0 m-auto lg:overflow-hidden md:overflow-hidden sm:overflow-hidden" >
+            <div className="max-w-[1920px] m-0 m-auto lg:overflow-hidden md:overflow-hidden sm:overflow-hidden" >
                 <section className="mt-[99px] lg:mt-[20px] md:mt-[20px] sm:mt-[20px] ml-[160px] lg:ml-0 mxl:ml-0 md:ml-0 sm:ml-0">
                     <div
-                        className="bg-[#7B72FE] max-w-[1760px] h-[680px] mxl:h-[1160px] lg:h-[970px] lg:h-[1050px] md:h-[1120px] sm:h-[600px] z[-1] rounded-l-[40px] overflow-hidden">
+                        className="bg-black max-w-[1760px] h-[680px] mxl:h-[1160px] lg:h-[970px] lg:h-[1050px] md:h-[1120px] sm:h-[600px] z[-1] rounded-l-[40px] overflow-hidden">
                         <div className="flex relative justify-items-center">
                             <Dots color={colorPurple} position={purplePosition}/>
                             <div
@@ -30,7 +30,7 @@ function App() {
                             <div
                                 className="w-[340px] h-[340px] rounded-[50%] bg-[#746BF4] z-[1] absolute mxl:top-[423px] bottom-[-31px] left-[846px]"></div>
                             <div className="flex mxl:flex-wrap lg:flex-wrap md:flex-wrap sm:flex-wrap mxl:justify-center m-0 m-auto">
-                                <div className="text pt-[67px] sm:ml-[1px] sm:pl-[5px] sm:pr-[5px] sm:pt-[20px] mxl:pl-0 mxl:m-0 mxl:m-auto sm:m-[5px] lg:m-0 lg:m-auto lg:pt-[23px] pl-[95px] lg:pl-[40px] md:m-auto z-[2] md:pl-0">
+                                <div className="text pt-[67px] sm:ml-[1px] sm:pl-[5px] sm:pr-[5px] sm:pt-[20px] mxl:pl-0 mxl:m-0 mxl:m-auto sm:m-[5px] lg:m-0 lg:m-auto lg:pt-[23px] pl-[95px] lg:pl-[40px] md:m-auto z-[2]">
                                     <h3 className="w-[763px] leading-[130%] font-semibold text-[#fff] text-[54px] lg:text-[38px] md:text-[26px] sm:text-[18px] sm:w-[290px] tracking-widest">
                                         Профессия <br/> Frontend — разработчик
                                     </h3>

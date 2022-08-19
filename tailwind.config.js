@@ -14,17 +14,13 @@ module.exports = {
         },
         extend: {
             animation: {
-                scrollMove: 'scrollMove 0.5s',
+                scrollMove: 'scrollMove 0.5s ease-in-out',
             },
             keyframes: {
                 scrollMove: {
                     '0%': {
                         transform: 'translateY(50%)',
                         opacity: 0
-                    },
-                    '75%': {
-                        transform: 'translateY(25%)',
-                        opacity: 0.75
                     },
                     '100%': {opacity: 1},
                 }
