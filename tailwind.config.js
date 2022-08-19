@@ -22,10 +22,15 @@ module.exports = {
                         transform: 'translateY(50%)',
                         opacity: 0
                     },
-                    '100%': {opacity: 1},
+                    '100%': {
+                        transform: 'translateY(0%)',
+                        opacity: 1
+                    },
                 }
             }
         },
     },
-    plugins: [],
+    plugins
+:
+[],
 }
